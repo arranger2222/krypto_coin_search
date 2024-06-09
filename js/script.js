@@ -30,8 +30,8 @@ loadFavoritesFromLocalStorage();
 
 async function loadJson() {
   try {
-    // const response = await fetch('https://api-eu.okotoki.com/coins');
-    const response = await fetch('../assets/coins.json');
+    const response = await fetch('https://api-eu.okotoki.com/coins');
+    // const response = await fetch('../assets/coins.json');
     if (!response.ok) {
       throw new Error('Мережева відповідь була некоректною');
     }
