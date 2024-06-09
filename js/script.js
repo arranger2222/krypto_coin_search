@@ -110,13 +110,11 @@ function displayFavorites() {
   listRef.style.overflowY = 'auto';
 }
 
-function clearInput() {
+function clearInput(event) {
   inputRef.value = '';
-  if (favoriteButtonRef.classList.contains('active')) {
-    displayFavorites();
-  } else {
-    handler();
-  }
+  clearIconRef.style.display = 'none';
+  listRef.style.display = 'none';
+  event.stopPropagation();
 }
 
 inputRef.addEventListener('input', function () {
@@ -140,14 +138,15 @@ function handleClickOutside(event) {
   const isFavoriteButton = event.target === favoriteButtonRef;
   const isAllButton = event.target === allButtonRef;
   const isSearchButton = event.target === searchButtonRef;
-
+  const isClearIcon = event.target.classList.contains('clear-icon');
   if (
     !isInput &&
     !isList &&
     !isListContainer &&
     !isFavoriteButton &&
     !isAllButton &&
-    !isSearchButton
+    !isSearchButton &&
+    !isClearIcon
   ) {
     hideSearchContainer();
   }
