@@ -41,7 +41,7 @@ body {
 
 .coins-list {
   list-style-type: none;
-  width: 80%;
+  width: 83%;
   padding: 0;
   display: none;
   max-height: 300px;
@@ -181,7 +181,7 @@ body {
   border: none;
   background-color: transparent;
   color: #ccc;
-  font-size: small;
+  font-size: 12px;
   text-transform: uppercase;
   font-weight: 100;
 }
@@ -197,8 +197,8 @@ body {
   top: 50%;
   left: 10px;
   transform: translateY(-50%);
-  width: 1em;
-  height: 1em;
+  width: 1.2em;
+  height: 1.2em;
   background: url('../assets/CodiconStarFull.png');
   background-size: contain;
   pointer-events: none;
