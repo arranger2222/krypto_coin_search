@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Okotoki</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.min.js"
+      defer
+    ></script>
+    <script src="./js/script.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <button type="button" class="search_button">Search</button>
+      <div class="search_container" style="display: none">
+        <div class="input-wrapper">
+          <input type="text" class="search_input" placeholder="Search..." />
+        </div>
+        <span class="clear-icon">&times;</span>
+
+        <div class="buttons-container">
+          <button type="button" class="favorite_button filter button">
+            Favorite
+          </button>
+          <button type="button" class="allCoins_btn filter button">
+            All coins
+          </button>
+        </div>
+
+        <ul class="coins-list"></ul>
+      </div>
+    </div>
+  </body>
+</html>
